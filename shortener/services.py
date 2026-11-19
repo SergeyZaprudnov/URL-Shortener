@@ -1,6 +1,8 @@
-import string
 import random
+import string
+
 from django.db import IntegrityError
+
 from .models import ShortLink
 
 

@@ -16,8 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from shortener.views import ShortLinkCreateView, ShortLinkRedirectView
 
+from shortener.views import ShortLinkCreateView, ShortLinkRedirectView
 
 urlpatterns = [
     path('admin/', admin.site.urls),

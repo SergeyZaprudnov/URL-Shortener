@@ -1,11 +1,12 @@
 from django.core.cache import cache
-from django.shortcuts import redirect
 from django.http import Http404
+from django.shortcuts import redirect
 from rest_framework import status
-from rest_framework.views import APIView
 from rest_framework.response import Response
-from .services import create_short_link
+from rest_framework.views import APIView
+
 from .models import ShortLink
+from .services import create_short_link
 
 
 class ShortLinkCreateView(APIView):

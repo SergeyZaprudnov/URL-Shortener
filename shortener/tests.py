@@ -1,8 +1,9 @@
-import pytest 
+import pytest
 from django.core.cache import cache
-from django.urls import reverse
 from rest_framework.test import APIClient
+
 from .models import ShortLink
+
 
 @pytest.fixture
 def api_client():
