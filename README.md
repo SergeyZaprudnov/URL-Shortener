@@ -30,27 +30,20 @@ Quick Start
 
     Clone the repository:
 
-bash
-
 git clone https://github.com/SergeyZaprudnov/URL-Shortener.git
 cd URL-Shortener
 
-    Create .env:
-
-bash
+    Create .env file:
 
 cp .env.example .env
-# Open .env and set your SECRET_KEY
+
+(Open .env and set your SECRET_KEY)
 
     Run with Docker:
-
-bash
 
 docker compose up -d --build
 
     Apply migrations:
-
-bash
 
 docker compose exec web python manage.py migrate
 
@@ -78,23 +71,21 @@ Method	Endpoint	Description
 POST	/api/links/	Create a short link
 GET	/{short_code}/	Redirect to original URL
 Running Tests
-bash
 
 poetry run pytest -v
-
 Linting
-bash
 
 poetry run ruff check .
-
 Project Structure
-text
 
 url-shortener/
-├── config/              # Django settings, URLs
-├── shortener/           # Main app: models, views, services, tests
-├── .github/workflows/   # GitHub Actions CI
+├── config/ # Django settings, URLs
+├── shortener/ # Main app: models, views, services, tests
+├── .github/workflows/ # GitHub Actions CI
 ├── Dockerfile
 ├── docker-compose.yml
 ├── pyproject.toml
 └── README.md
+CI
+
+GitHub Actions runs linter and tests on every push to main and develop. See .github/workflows/ci.yml.
